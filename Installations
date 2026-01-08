@@ -1,0 +1,4 @@
+!pip install pycryptodomex
+
+!mkdir my_files
+!echo "this is cryptography assignment" > my_files/file.py
