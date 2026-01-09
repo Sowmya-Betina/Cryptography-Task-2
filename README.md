@@ -7,3 +7,5 @@ Use of RSA asymmetric encryption anddigital signatures
 Key management practice - key values are disclosed in output and Hash fingerprint, Digital Signature is verified
 
 The code combines the speed of symmetric encryption (AES) with the security of asymmetric encryption (RSA) and ensures data integrity and authenticity via digital signatures.
+
+Execution order - Installation -> keys.py -> encrypt.py -> decrypt.py -> Execution
