@@ -29,7 +29,7 @@ def encrypt_and_sign(filepath, sender, recipient, output_file="encrypted_file"):
     hash_obj = SHA256.new(ciphertext + nonce + tag) # bundles package into hash fro signing 
     signature = pss.new(sender_priv).sign(hash_obj) # sender private key to sign
 
-    # Save Package [EncKeyLen(4b) EncKey Nonce(16b) Tag(16b) Sig(256b) Ciphertext]
+    # Save Package [EncKeyLen(4b) EncKey Nonce(16b) Tag(16b) Sig(256b) Ciphertext] - package structure reference from AI tools
     with open(output_file, 'wb') as f:
         f.write(len(enc_aes_key).to_bytes(4, 'big'))
         f.write(enc_aes_key)
